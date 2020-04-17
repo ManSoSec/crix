@@ -4,7 +4,9 @@
 # LLVM version: 10.0.0 (as of 09/12/2019)
 
 ROOT=$(git rev-parse --show-toplevel)
+git clone https://github.com/llvm/llvm-project.git
 cd $ROOT/llvm/llvm-project
+git checkout remotes/origin/release/10.x
 
 if [ ! -d "build" ]; then
   mkdir build
